@@ -1,0 +1,15 @@
+FROM node:12-alpine
+#install git
+Run apk add --no-cache git
+#clone the repository
+
+RUN git clone -q https://github.com/ISMAILZoo/todo-app.git
+
+#set the working directory to the app directory
+WORKDIR /todo-app
+
+#install dependencies 
+RUN yarn install --production 
+
+#start the application 
+CMD["node","src/index.js"]
