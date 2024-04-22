@@ -5,7 +5,7 @@ Service:
     -"3000:3000"
   volumes:
     - .:/app
-  envirenment:
+  environment:
     -MYSQL_HOST=db
     -MYSQL_USER=root
     -MYSQL_PASSWORD=iir4
@@ -15,7 +15,7 @@ Service:
     -db
 db:
   image:mysql:5.7
-  envirenement:
+  environement:
     -MYSQL_ROOT_PASSWORD=iir4
     -MYSQL_DATABASE=todos
   volumes:
